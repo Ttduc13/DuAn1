@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0dd41cdac57fdb6488eeb50e3e0391c3
+guid: 0226513a01f3a304a85c15abed708c4f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -126,10 +126,10 @@ TextureImporter:
       name: demon-idle_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 17
-        width: 134
-        height: 124
+        x: 0
+        y: 0
+        width: 160
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: demon-idle_1
       rect:
         serializedVersion: 2
-        x: 164
-        y: 16
-        width: 156
-        height: 93
+        x: 160
+        y: 0
+        width: 160
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: demon-idle_2
       rect:
         serializedVersion: 2
-        x: 332
-        y: 18
-        width: 140
-        height: 91
+        x: 320
+        y: 0
+        width: 160
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: demon-idle_3
       rect:
         serializedVersion: 2
-        x: 498
-        y: 18
-        width: 100
-        height: 93
+        x: 480
+        y: 0
+        width: 160
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: demon-idle_4
       rect:
         serializedVersion: 2
-        x: 652
-        y: 18
-        width: 140
-        height: 91
+        x: 640
+        y: 0
+        width: 160
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: demon-idle_5
       rect:
         serializedVersion: 2
-        x: 804
-        y: 18
-        width: 156
-        height: 91
+        x: 800
+        y: 0
+        width: 160
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
