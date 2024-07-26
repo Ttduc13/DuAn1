@@ -215,6 +215,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8994228148738752714, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 1cda9f6a8fe90f148b16bbfd5e3a1b99, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -317,6 +321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8994228148738752714, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 80962bda01f522045ac82c27f730253e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -419,6 +427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8994228148738752714, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: a4a02e5e542add8429a3d213eef868e8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -521,6 +533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8994228148738752714, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b85fe37f115cff4a9adef57d200a02a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -623,6 +639,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card 8
       objectReference: {fileID: 0}
+    - target: {fileID: 8994228148738752714, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 26e2c556f6c9cc048a803b1eb70baeea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -725,6 +745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8994228148738752714, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 996945600f677ee4fb1def5c44f97dfb, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1011,6 +1035,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8994228148738752714, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 5035a22f49558114a90fcfa33181cb58, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1113,6 +1141,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8994228148738752714, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 94a714ee422e2a94e9881522591a0d7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1215,6 +1247,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8994228148738752714, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 176c8de750b75184985b8f2159fe175e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1355,7 +1391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5536258391742929967, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 264.4389
+      value: 264.44
       objectReference: {fileID: 0}
     - target: {fileID: 5536258391742929967, guid: bb76bd7a8e1702d4f8f21b5a5b9d6e7b, type: 3}
       propertyPath: m_LocalPosition.x
