@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CardDisplay : MonoBehaviour
 {
     // Start is called before the first frame update
-    public Card card;
+    public Cards card;
 
     public Text nameText;
     public Text descriptionText;

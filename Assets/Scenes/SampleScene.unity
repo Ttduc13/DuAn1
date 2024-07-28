@@ -5060,13 +5060,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 909ea3e73795be74c82d81f073e7007e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 15
-  minDamage: 1
-  maxDamage: 4
+  health: 10
+  minDamage: 2
+  maxDamage: 2
   skillPos: {fileID: 1819370895}
   prefab:
-  - {fileID: 4372558663965252300, guid: 2f461d0d4f1bdbb44b6166ff40ef4868, type: 3}
   - {fileID: 7304735519939203376, guid: a1118fccdf4533c4a9951640e378f8c1, type: 3}
+  - {fileID: 4372558663965252300, guid: 2f461d0d4f1bdbb44b6166ff40ef4868, type: 3}
   index: 0
 --- !u!1 &1874373380
 GameObject:
