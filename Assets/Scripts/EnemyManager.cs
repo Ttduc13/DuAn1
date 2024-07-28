@@ -9,10 +9,13 @@ public class EnemyManager : MonoBehaviour
     public int minDamage;
     public int maxDamage;
 
+    
+
 
     void DamagePlayer()
     {
         int damage = UnityEngine.Random.Range(minDamage, maxDamage);
+       
         Debug.Log("Player take " + damage + " damage!");
     }
 }

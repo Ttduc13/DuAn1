@@ -37,7 +37,7 @@ public class MenuManager : MonoBehaviour
 
     private void GameManagerOnOnGameStateChanged(GameState state)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     void Start()
