@@ -21,7 +21,6 @@ public class CardDisplay : MonoBehaviour
     public int damage;
     public int health;
     public int manaCost;
-
     void Start()
     {
         nameText.text = card.name;

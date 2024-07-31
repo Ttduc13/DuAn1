@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System;
 
 
-public class Demon : MonoBehaviour
+public class shinigami : MonoBehaviour
 {
     [SerializeField] public int health;
     int currentHealth;
@@ -40,11 +40,7 @@ public class Demon : MonoBehaviour
         await Task.Delay(500);
         int damage = UnityEngine.Random.Range(minDamage, maxDamage);
         Debug.Log("Player take " + damage + " damage!");
-
-        player.currentHealth = player.currentHealth - damage;
-
-        //player.health = player.health - damage;
-
+        player.health = player.health - damage;
         Instantiate(prefab[index], skillPos.position, Quaternion.identity);
         anim.SetBool("isAttack", false);
     }
