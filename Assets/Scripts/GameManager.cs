@@ -16,6 +16,10 @@ public class GameManager : MonoBehaviour
 
 	Demon demon;
 
+	MenuManager menuManager;
+
+	PlayerManager player;
+
     private void Awake()
     {
         instance = this;
@@ -49,6 +53,7 @@ public class GameManager : MonoBehaviour
 	{
         isPlayerTurn = true;
 		Debug.Log("Player Turn");
+		player.mana = 5;
 	}
 
 	public async void HandleEnemyTurn()
@@ -66,6 +71,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
 	{
+		menuManager = FindObjectOfType<MenuManager>();
+		player = FindObjectOfType<PlayerManager>();
         UpdateGameState(GameState.PlayerTurn);
         
     }

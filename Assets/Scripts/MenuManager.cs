@@ -37,7 +37,7 @@ public class MenuManager : MonoBehaviour
 
     private void GameManagerOnOnGameStateChanged(GameState state)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
     }
 
     void Start()
@@ -46,6 +46,11 @@ public class MenuManager : MonoBehaviour
         camAnim = Camera.main.GetComponent<Animator>();
         demon = FindObjectOfType<Demon>();
         player=FindObjectOfType<PlayerManager>();
+        DrawCard();
+        DrawCard();
+        DrawCard();
+        DrawCard();
+        DrawCard();
     }
 
     public void DrawCard()

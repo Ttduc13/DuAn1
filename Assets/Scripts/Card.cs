@@ -17,6 +17,9 @@ public class Card : MonoBehaviour
 
     GameManager gameManager;
 	Demon demon;
+	PlayerManager player;
+
+	CardDisplay cardDisplay;
 
     private void Start()
 	{
@@ -27,27 +30,74 @@ public class Card : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
 
 		demon = FindObjectOfType<Demon>();
+        player = FindObjectOfType<PlayerManager>();
+
+        cardDisplay = GetComponent<CardDisplay>();
     }
 	private void OnMouseDown()
 	{
 		if (gameManager.isPlayerTurn == true)
 		{
-            if (!hasBeenPlayed)
-            {
-                Instantiate(hollowCircle, transform.position, Quaternion.identity);
+			if (player.mana > 0 && cardDisplay.manaCost <= player.mana)
+			{
+                if (!hasBeenPlayed)
+                {
+                    Instantiate(hollowCircle, transform.position, Quaternion.identity);
 
-                camAnim.SetTrigger("shake");
-                anim.SetTrigger("move");
+                    camAnim.SetTrigger("shake");
+                    anim.SetTrigger("move");
 
-                transform.position += Vector3.up * 3f;
-                hasBeenPlayed = true;
-                mm.availableCardSlots[handIndex] = true;
-                Invoke("MoveToDiscardPile", 1f);
+                    transform.position += Vector3.up * 3f;
+                    hasBeenPlayed = true;
+                    mm.availableCardSlots[handIndex] = true;
+                    Invoke("MoveToDiscardPile", 1f);
 
-				demon.health = demon.health - 1;
-                Debug.Log("Monster take " + 1 + " damage!");
+                    if (cardDisplay.damage > 0)
+                    {
+                        demon.health = demon.health - cardDisplay.damage;
+                        Debug.Log("Monster take " + cardDisplay.damage + " damage!");
+                    }
+
+                    if (cardDisplay.health > 0)
+                    {
+                        player.currentHealth = player.currentHealth + cardDisplay.health;
+                        if (player.currentHealth > player.health)
+                        {
+                            player.currentHealth = player.health;
+                        }
+                    }
+
+					player.mana = player.mana - cardDisplay.manaCost;
+                }
             }
-        }
+   //         if (!hasBeenPlayed)
+   //         {
+   //             Instantiate(hollowCircle, transform.position, Quaternion.identity);
+
+   //             camAnim.SetTrigger("shake");
+   //             anim.SetTrigger("move");
+
+   //             transform.position += Vector3.up * 3f;
+   //             hasBeenPlayed = true;
+   //             mm.availableCardSlots[handIndex] = true;
+   //             Invoke("MoveToDiscardPile", 1f);
+
+			//	if (cardDisplay.damage > 0)
+			//	{
+			//		demon.health = demon.health - cardDisplay.damage;
+			//		Debug.Log("Monster take " + cardDisplay.damage + " damage!");
+			//	}
+
+			//	if (cardDisplay.health > 0)
+			//	{
+			//		player.currentHealth = player.currentHealth + cardDisplay.health;
+			//		if (player.currentHealth > player.health)
+			//		{
+			//			player.currentHealth = player.health;
+			//		}
+			//	}
+			//}
+		}
 	}
 
 	void MoveToDiscardPile()
