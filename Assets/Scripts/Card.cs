@@ -56,6 +56,7 @@ public class Card : MonoBehaviour
                     {
                         demon.health = demon.health - cardDisplay.damage;
                         Debug.Log("Monster take " + cardDisplay.damage + " damage!");
+						demon.updateEnemyHelthBar();
                     }
 
                     if (cardDisplay.health > 0)
@@ -65,6 +66,7 @@ public class Card : MonoBehaviour
                         {
                             player.currentHealth = player.health;
                         }
+						player.updatePlayerHelthBar();
                     }
 
 					player.mana = player.mana - cardDisplay.manaCost;

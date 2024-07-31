@@ -17,6 +17,8 @@ public class Demon : MonoBehaviour
 
     private Animator anim;
 
+    public HealthBar healthBar;
+
     // skill
     public Transform skillPos;
     public GameObject[] prefab;
@@ -27,6 +29,8 @@ public class Demon : MonoBehaviour
     {
         player = FindObjectOfType<PlayerManager>();
         anim = GetComponent<Animator>();
+        currentHealth = health;
+        updateEnemyHelthBar();
     }
 
     void Update()
@@ -40,12 +44,14 @@ public class Demon : MonoBehaviour
         await Task.Delay(500);
         int damage = UnityEngine.Random.Range(minDamage, maxDamage);
         Debug.Log("Player take " + damage + " damage!");
-
         player.currentHealth = player.currentHealth - damage;
-
-        //player.health = player.health - damage;
-
+        player.updatePlayerHelthBar();
         Instantiate(prefab[index], skillPos.position, Quaternion.identity);
         anim.SetBool("isAttack", false);
+    }
+
+    public void updateEnemyHelthBar()
+    {
+        healthBar.UpdateBar(currentHealth, health);
     }
 }
