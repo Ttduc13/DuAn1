@@ -108,7 +108,7 @@ public class MenuManager : MonoBehaviour
         deckSizeText.text = deck.Count.ToString();
         discardPileSizeText.text = discardPile.Count.ToString();
 
-        demonHealth.text = demon.health.ToString();
-        playerHealth.text = player.health.ToString();
+        //demonHealth.text = demon.health.ToString();
+        //playerHealth.text = player.health.ToString();
     }
 }

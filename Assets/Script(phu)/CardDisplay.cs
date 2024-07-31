@@ -18,9 +18,9 @@ public class CardDisplay : MonoBehaviour
     public Text attackText;
     public Text healthText;
 
-    public int damage;
-    public int health;
-    public int manaCost;
+    public string damage;
+    public string health;
+    public string manaCost;
 
     void Start()
     {
@@ -33,6 +33,9 @@ public class CardDisplay : MonoBehaviour
         attackText.text = card.attack.ToString();
         healthText.text = card.health.ToString();
 
+        damage = card.attack.ToString();
+        health = card.health.ToString();
+        manaCost = card.manaCost.ToString();
     }
 
 }

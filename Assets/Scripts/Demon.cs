@@ -8,7 +8,7 @@ using System;
 public class Demon : MonoBehaviour
 {
     [SerializeField] public int health;
-    int currentHealth;
+    public int currentHealth;
 
     [SerializeField] public int minDamage;
     [SerializeField] public int maxDamage;

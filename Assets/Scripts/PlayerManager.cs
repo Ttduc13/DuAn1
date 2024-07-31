@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 { 
     public int health;
     public int currentHealth = 0;
+
     public int mana = 0;
+    public int currentMana;
+    public TextMeshProUGUI manaValue;
 
     public HealthBar healthBar;
     // Start is called before the first frame update
@@ -14,6 +18,9 @@ public class PlayerManager : MonoBehaviour
     {
         currentHealth = health;
         updatePlayerHelthBar();
+
+        currentMana = mana;
+        updateManaValue();
     }
 
     // Update is called once per frame
@@ -25,5 +32,10 @@ public class PlayerManager : MonoBehaviour
     public void updatePlayerHelthBar()
     {
         healthBar.UpdateBar(currentHealth, health);
+    }
+
+    public void updateManaValue()
+    {
+        manaValue.text = currentMana.ToString() + "/" + mana.ToString();
     }
 }
