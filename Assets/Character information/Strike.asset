@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caedd1fbc2247c74abe035b0da8349dc, type: 3}
-  m_Name: "Nh\xE2n v\u1EADt 1"
+  m_Name: Strike
   m_EditorClassIdentifier: 
-  Name: "C\xFA \u0110\xE1nh L\u1EEDa"
-  description: "G\xE2y ra 8 \u0111i\u1EC3m s\xE1t th\u01B0\u01A1ng cho k\u1EBB th\xF9
-    b\u1EB1ng ng\u1ECDn l\u1EEDa m\u1EA1nh m\u1EBD."
-  artwork: {fileID: 21300000, guid: bc0f858497a1aa9449dcccc6367f7daf, type: 3}
-  manaCost: 4
-  attack: 8
+  Name: Strike
+  description: Deal 6 damage.
+  artwork: {fileID: 1034337280, guid: 0276024f3e5add043bbe991b922bcf9a, type: 3}
+  manaCost: 1
+  attack: 6
   health: 0

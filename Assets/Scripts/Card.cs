@@ -20,6 +20,7 @@ public class Card : MonoBehaviour
 	PlayerManager player;
 
 	CardDisplay cardDisplay;
+	CardFunction cardFunction;
 
     private void Start()
 	{
@@ -33,12 +34,13 @@ public class Card : MonoBehaviour
         player = FindObjectOfType<PlayerManager>();
 
         cardDisplay = GetComponent<CardDisplay>();
+		cardFunction = GetComponent<CardFunction>();
     }
 	private void OnMouseDown()
 	{
 		if (gameManager.isPlayerTurn == true)
 		{
-			if (player.mana > 0 && cardDisplay.manaCost <= player.mana)
+			if (player.mana > 0 && cardFunction.manaCost <= player.mana)
 			{
                 if (!hasBeenPlayed)
                 {
@@ -52,16 +54,16 @@ public class Card : MonoBehaviour
                     mm.availableCardSlots[handIndex] = true;
                     Invoke("MoveToDiscardPile", 1f);
 
-                    if (cardDisplay.damage > 0)
+                    if (cardFunction.damage > 0)
                     {
-                        demon.health = demon.health - cardDisplay.damage;
-                        Debug.Log("Monster take " + cardDisplay.damage + " damage!");
+                        demon.currentHealth = demon.currentHealth - cardFunction.damage;
+                        Debug.Log("Monster take " + cardFunction.damage + " damage!");
 						demon.updateEnemyHelthBar();
                     }
 
-                    if (cardDisplay.health > 0)
+                    if (cardFunction.health > 0)
                     {
-                        player.currentHealth = player.currentHealth + cardDisplay.health;
+                        player.currentHealth = player.currentHealth + cardFunction.health;
                         if (player.currentHealth > player.health)
                         {
                             player.currentHealth = player.health;
@@ -69,7 +71,7 @@ public class Card : MonoBehaviour
 						player.updatePlayerHelthBar();
                     }
 
-					player.mana = player.mana - cardDisplay.manaCost;
+					player.currentMana = player.currentMana - cardFunction.manaCost;
                 }
             }
    //         if (!hasBeenPlayed)

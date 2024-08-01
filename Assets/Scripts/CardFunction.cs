@@ -2,16 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardFunctions : MonoBehaviour
+public class CardFunction : MonoBehaviour
 {
-    public Cards card;
+    public CardDisplay cardDisplay;
     string damageStr;
+    string healthStr;
+    string manaStr;
     public int damage;
+    public int health;
+    public int manaCost;
     void Start()
     {
-        damageStr = card.attack.ToString();
-        Debug.Log(damageStr);
+        cardDisplay = GetComponent<CardDisplay>();
+
+        damageStr = cardDisplay.damage.ToString();
         damage = int.Parse(damageStr);
+
+        healthStr = cardDisplay.health.ToString();
+        health = int.Parse(healthStr);
+
+        manaStr = cardDisplay.manaCost.ToString();
+        manaCost = int.Parse(manaStr);
     }
 
     // Update is called once per frame

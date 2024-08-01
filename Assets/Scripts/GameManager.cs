@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
 	{
         isPlayerTurn = true;
 		Debug.Log("Player Turn");
-		player.mana = 5;
+		player.currentMana = player.mana;
 	}
 
 	public async void HandleEnemyTurn()
