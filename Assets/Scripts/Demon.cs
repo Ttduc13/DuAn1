@@ -39,11 +39,12 @@ public class Demon : MonoBehaviour
     }
 
     public async void DamagePlayer()
-    {
-        anim.SetBool("isAttack", true);
+    { 
         await Task.Delay(500);
+        anim.SetBool("isAttack", true);
         int damage = UnityEngine.Random.Range(minDamage, maxDamage);
         Debug.Log("Player take " + damage + " damage!");
+        player.damagePopUp();
         player.currentHealth = player.currentHealth - damage;
         player.updatePlayerHelthBar();
         Instantiate(prefab[index], skillPos.position, Quaternion.identity);

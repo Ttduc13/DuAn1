@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
 
 	PlayerManager player;
 
+	public GameObject EnemyTurn;
+	public GameObject PlayerTurn;
+
     private void Awake()
     {
         instance = this;
@@ -49,21 +52,28 @@ public class GameManager : MonoBehaviour
 
     }
 
-	public void HandlePlayerTurn()
+	public async void HandlePlayerTurn()
 	{
+		PlayerTurn.SetActive(true);
         isPlayerTurn = true;
 		Debug.Log("Player Turn");
 		player.currentMana = player.mana;
-	}
+		player.updateManaValue();
+        await Task.Delay(900);
+        PlayerTurn.SetActive(false);
+
+    }
 
 	public async void HandleEnemyTurn()
 	{
+        EnemyTurn.SetActive(true);
         isPlayerTurn = false;
         Debug.Log("Enemy Turn");
         demon = FindObjectOfType<Demon>();
-
-		demon.DamagePlayer();
-        await Task.Delay(1000);
+		await Task.Delay(900);
+		EnemyTurn.SetActive(false);
+        demon.DamagePlayer();
+        await Task.Delay(3000);
 
         UpdateGameState(GameState.PlayerTurn);
 

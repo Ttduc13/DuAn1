@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caedd1fbc2247c74abe035b0da8349dc, type: 3}
-  m_Name: "Nh\xE2n v\u1EADt 2"
+  m_Name: Bash
   m_EditorClassIdentifier: 
-  Name: "Ch\xE9m Xuy\xEAn Th\u1EA5u"
-  description: "G\xE2y 10 \u0111i\u1EC3m s\xE1t th\u01B0\u01A1ng v\xE0 b\u1ECF qua
-    gi\xE1p c\u1EE7a k\u1EBB th\xF9."
-  artwork: {fileID: 21300000, guid: bc0f858497a1aa9449dcccc6367f7daf, type: 3}
-  manaCost: 6
-  attack: 10
+  Name: Bash
+  description: Deal 8 damage. Apply 2 Vulnerable.
+  artwork: {fileID: 813706539, guid: 0ff39e46e7fc8d549b8310a37d707819, type: 3}
+  manaCost: 2
+  attack: 8
   health: 0

@@ -72,6 +72,7 @@ public class Card : MonoBehaviour
                     }
 
 					player.currentMana = player.currentMana - cardFunction.manaCost;
+					player.updateManaValue();
                 }
             }
    //         if (!hasBeenPlayed)

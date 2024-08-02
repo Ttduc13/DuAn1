@@ -13,6 +13,10 @@ public class PlayerManager : MonoBehaviour
     public TextMeshProUGUI manaValue;
 
     public HealthBar healthBar;
+
+    public int damaged = 0;
+    public GameObject popUpPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +41,15 @@ public class PlayerManager : MonoBehaviour
     public void updateManaValue()
     {
         manaValue.text = currentMana.ToString() + "/" + mana.ToString();
+    }
+
+    public void damagePopUp()
+    {
+        damaged = health - currentHealth;
+        if (damaged > 0) 
+        {
+            GameObject popUp = Instantiate(popUpPrefab, gameObject.transform.position, Quaternion.identity);
+            popUp.GetComponentInChildren<TMP_Text>().text = damaged.ToString();
+        }
     }
 }
