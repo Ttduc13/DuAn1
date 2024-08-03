@@ -16,7 +16,7 @@ public class Card : MonoBehaviour
 	public GameObject hollowCircle;
 
     GameManager gameManager;
-	Demon demon;
+	Enemy demon;
 	PlayerManager player;
 
 	CardDisplay cardDisplay;
@@ -30,7 +30,7 @@ public class Card : MonoBehaviour
 
         gameManager = FindObjectOfType<GameManager>();
 
-		demon = FindObjectOfType<Demon>();
+		demon = FindObjectOfType<Enemy>();
         player = FindObjectOfType<PlayerManager>();
 
         cardDisplay = GetComponent<CardDisplay>();

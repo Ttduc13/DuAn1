@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour
     public List<Card> discardPile;
     public TextMeshProUGUI discardPileSizeText;
 
-    Demon demon;
+    Enemy demon;
     public TextMeshProUGUI demonHealth;
 
     PlayerManager player;
@@ -44,7 +44,7 @@ public class MenuManager : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         camAnim = Camera.main.GetComponent<Animator>();
-        demon = FindObjectOfType<Demon>();
+        demon = FindObjectOfType<Enemy>();
         player=FindObjectOfType<PlayerManager>();
         DrawCard();
         DrawCard();

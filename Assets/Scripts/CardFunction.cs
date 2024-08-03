@@ -15,14 +15,14 @@ public class CardFunction : MonoBehaviour
     public int manaCost;
 
     public PlayerManager player;
-    public Demon demon;
+    public Enemy demon;
 
     public GameObject shieldPopUp;
 
     void Start()
     {
         cardDisplay = GetComponent<CardDisplay>();
-        demon = FindObjectOfType<Demon>();
+        demon = FindObjectOfType<Enemy>();
         player = FindObjectOfType<PlayerManager>();
 
         cardDisplay.UpdateCard();
@@ -59,9 +59,8 @@ public class CardFunction : MonoBehaviour
     {
         if(gameObject.layer == LayerMask.NameToLayer("DefendCard"))
         {
-            if(health > 0)
+            if (health > 0) 
             {
-                shieldPopUp.SetActive(true);
                 player.shield += health;
             }
             Debug.Log("This is Defend Card");

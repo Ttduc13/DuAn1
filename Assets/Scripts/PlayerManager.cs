@@ -19,6 +19,7 @@ public class PlayerManager : MonoBehaviour
 
     public int shield = 0;
     public TextMeshProUGUI shieldValue;
+    public GameObject shieldPopUp;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +52,14 @@ public class PlayerManager : MonoBehaviour
     public void updateShieldTxt()
     {
         shieldValue.text = shield.ToString();
+        if (shield > 0)
+        {
+            shieldPopUp.SetActive(true);
+        }
+        if (shield <= 0)
+        {
+            shieldPopUp.SetActive(false);
+        }
     }
 
     public void damagePopUp()

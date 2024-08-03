@@ -5,6 +5,7 @@ using TMPro;
 using System;
 using System.Threading.Tasks;
 using static Unity.Burst.Intrinsics.Arm;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
 
 	public bool isPlayerTurn = false;
 
-	Demon demon;
+	Enemy enemy;
 
 	MenuManager menuManager;
 
@@ -49,12 +50,13 @@ public class GameManager : MonoBehaviour
         }
 
 		OnGameStateChanged?.Invoke(newState);
-
     }
 
 	public async void HandlePlayerTurn()
 	{
-		PlayerTurn.SetActive(true);
+        enemy = FindObjectOfType<Enemy>();
+        enemy.randomEvents();
+        PlayerTurn.SetActive(true);
         isPlayerTurn = true;
 		Debug.Log("Player Turn");
 		player.currentMana = player.mana;
@@ -69,10 +71,10 @@ public class GameManager : MonoBehaviour
         EnemyTurn.SetActive(true);
         isPlayerTurn = false;
         Debug.Log("Enemy Turn");
-        demon = FindObjectOfType<Demon>();
+        enemy = FindObjectOfType<Enemy>();
 		await Task.Delay(900);
 		EnemyTurn.SetActive(false);
-        demon.DamagePlayer();
+        enemy.DamagePlayer();
         await Task.Delay(3000);
 
         UpdateGameState(GameState.PlayerTurn);
