@@ -38,4 +38,10 @@ public class CardDisplay : MonoBehaviour
         manaCost = card.manaCost.ToString();
     }
 
+    public void UpdateCard()
+    {
+        damage = card.attack.ToString();
+        health = card.health.ToString();
+        manaCost = card.manaCost.ToString();
+    }
 }

@@ -54,12 +54,12 @@ public class Card : MonoBehaviour
                     mm.availableCardSlots[handIndex] = true;
                     Invoke("MoveToDiscardPile", 1f);
 
-                    if (cardFunction.damage > 0)
-                    {
-                        demon.currentHealth = demon.currentHealth - cardFunction.damage;
-                        Debug.Log("Monster take " + cardFunction.damage + " damage!");
-						demon.updateEnemyHelthBar();
-                    }
+      //              if (cardFunction.damage > 0)
+      //              {
+      //                  demon.currentHealth = demon.currentHealth - cardFunction.damage;
+      //                  Debug.Log("Monster take " + cardFunction.damage + " damage!");
+						//demon.updateEnemyHelthBar();
+      //              }
 
                     if (cardFunction.health > 0)
                     {
@@ -70,6 +70,9 @@ public class Card : MonoBehaviour
                         }
 						player.updatePlayerHelthBar();
                     }
+
+					cardFunction.Attack();
+					cardFunction.Defend();
 
 					player.currentMana = player.currentMana - cardFunction.manaCost;
 					player.updateManaValue();

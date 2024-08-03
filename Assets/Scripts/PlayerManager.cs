@@ -17,6 +17,9 @@ public class PlayerManager : MonoBehaviour
     public int damaged = 0;
     public GameObject popUpPrefab;
 
+    public int shield = 0;
+    public TextMeshProUGUI shieldValue;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +33,9 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        updatePlayerHelthBar();
+        updateManaValue();
+        updateShieldTxt();
     }
 
     public void updatePlayerHelthBar()
@@ -41,6 +46,11 @@ public class PlayerManager : MonoBehaviour
     public void updateManaValue()
     {
         manaValue.text = currentMana.ToString() + "/" + mana.ToString();
+    }
+
+    public void updateShieldTxt()
+    {
+        shieldValue.text = shield.ToString();
     }
 
     public void damagePopUp()
