@@ -16,7 +16,7 @@ public class Card : MonoBehaviour
 	public GameObject hollowCircle;
 
     GameManager gameManager;
-	Demon demon;
+	Enemy demon;
 	PlayerManager player;
 
 	CardDisplay cardDisplay;
@@ -30,7 +30,7 @@ public class Card : MonoBehaviour
 
         gameManager = FindObjectOfType<GameManager>();
 
-		demon = FindObjectOfType<Demon>();
+		demon = FindObjectOfType<Enemy>();
         player = FindObjectOfType<PlayerManager>();
 
         cardDisplay = GetComponent<CardDisplay>();
@@ -54,12 +54,12 @@ public class Card : MonoBehaviour
                     mm.availableCardSlots[handIndex] = true;
                     Invoke("MoveToDiscardPile", 1f);
 
-                    if (cardFunction.damage > 0)
-                    {
-                        demon.currentHealth = demon.currentHealth - cardFunction.damage;
-                        Debug.Log("Monster take " + cardFunction.damage + " damage!");
-						demon.updateEnemyHelthBar();
-                    }
+      //              if (cardFunction.damage > 0)
+      //              {
+      //                  demon.currentHealth = demon.currentHealth - cardFunction.damage;
+      //                  Debug.Log("Monster take " + cardFunction.damage + " damage!");
+						//demon.updateEnemyHelthBar();
+      //              }
 
                     if (cardFunction.health > 0)
                     {
@@ -71,7 +71,11 @@ public class Card : MonoBehaviour
 						player.updatePlayerHelthBar();
                     }
 
+					cardFunction.Attack();
+					cardFunction.Defend();
+
 					player.currentMana = player.currentMana - cardFunction.manaCost;
+					player.updateManaValue();
                 }
             }
    //         if (!hasBeenPlayed)

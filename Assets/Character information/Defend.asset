@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: caedd1fbc2247c74abe035b0da8349dc, type: 3}
-  m_Name: "Nh\xE2n v\u1EADt 3"
+  m_Name: Defend
   m_EditorClassIdentifier: 
-  Name: "M\u01B0a T\xEAn"
-  description: "G\xE2y 6 \u0111i\u1EC3m s\xE1t th\u01B0\u01A1ng cho t\u1EA5t c\u1EA3
-    k\u1EBB th\xF9."
-  artwork: {fileID: 21300000, guid: bc0f858497a1aa9449dcccc6367f7daf, type: 3}
-  manaCost: 3
-  attack: 6
-  health: 0
+  Name: Defend
+  description: Gain 5 Block.
+  artwork: {fileID: -866842393, guid: 3fe804570174994499030a68fa78315f, type: 3}
+  manaCost: 1
+  attack: 0
+  health: 5
