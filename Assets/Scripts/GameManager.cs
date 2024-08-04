@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
 	Enemy enemy;
 
-	MenuManager menuManager;
+	public MenuManager menuManager;
 
 	PlayerManager player;
 
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 		{
 			case GameState.PlayerTurn:
 				HandlePlayerTurn();
-				break;
+                break;
 			case GameState.EnemyTurn:
 				HandleEnemyTurn();
                 break;
@@ -53,17 +53,18 @@ public class GameManager : MonoBehaviour
     }
 
 	public async void HandlePlayerTurn()
-	{
+	{		
         enemy = FindObjectOfType<Enemy>();
         enemy.randomEvents();
         PlayerTurn.SetActive(true);
         isPlayerTurn = true;
-		Debug.Log("Player Turn");
+        menuManager.StartTurn();
+		menuManager.AutoShuffle();
+        Debug.Log("Player Turn");
 		player.currentMana = player.mana;
 		player.updateManaValue();
         await Task.Delay(900);
         PlayerTurn.SetActive(false);
-
     }
 
 	public async void HandleEnemyTurn()
@@ -76,9 +77,7 @@ public class GameManager : MonoBehaviour
 		EnemyTurn.SetActive(false);
         enemy.DamagePlayer();
         await Task.Delay(3000);
-
         UpdateGameState(GameState.PlayerTurn);
-
     }
 
     private void Start()
@@ -89,6 +88,19 @@ public class GameManager : MonoBehaviour
         
     }
 
+  //  public async void StartTurn()
+  //  {
+  //      menuManager.DrawCard();
+		//await Task.Delay(100);
+  //      menuManager.DrawCard();
+  //      await Task.Delay(100);
+  //      menuManager.DrawCard();
+  //      await Task.Delay(100);
+  //      menuManager.DrawCard();
+  //      await Task.Delay(100);
+  //      menuManager.DrawCard();
+  //  }
+
 }
 
 public enum GameState
@@ -98,3 +110,5 @@ public enum GameState
 	Victory,
 	Lose,
 }
+
+

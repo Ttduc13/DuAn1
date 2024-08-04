@@ -40,7 +40,7 @@ public class Card : MonoBehaviour
 	{
 		if (gameManager.isPlayerTurn == true)
 		{
-			if (player.mana > 0 && cardFunction.manaCost <= player.mana)
+			if (player.currentMana > 0 && cardFunction.manaCost <= player.currentMana)
 			{
                 if (!hasBeenPlayed)
                 {
@@ -61,15 +61,15 @@ public class Card : MonoBehaviour
 						//demon.updateEnemyHelthBar();
       //              }
 
-                    if (cardFunction.health > 0)
-                    {
-                        player.currentHealth = player.currentHealth + cardFunction.health;
-                        if (player.currentHealth > player.health)
-                        {
-                            player.currentHealth = player.health;
-                        }
-						player.updatePlayerHelthBar();
-                    }
+      //              if (cardFunction.health > 0)
+      //              {
+      //                  player.currentHealth = player.currentHealth + cardFunction.health;
+      //                  if (player.currentHealth > player.health)
+      //                  {
+      //                      player.currentHealth = player.health;
+      //                  }
+						//player.updatePlayerHelthBar();
+      //              }
 
 					cardFunction.Attack();
 					cardFunction.Defend();
@@ -78,33 +78,6 @@ public class Card : MonoBehaviour
 					player.updateManaValue();
                 }
             }
-   //         if (!hasBeenPlayed)
-   //         {
-   //             Instantiate(hollowCircle, transform.position, Quaternion.identity);
-
-   //             camAnim.SetTrigger("shake");
-   //             anim.SetTrigger("move");
-
-   //             transform.position += Vector3.up * 3f;
-   //             hasBeenPlayed = true;
-   //             mm.availableCardSlots[handIndex] = true;
-   //             Invoke("MoveToDiscardPile", 1f);
-
-			//	if (cardDisplay.damage > 0)
-			//	{
-			//		demon.health = demon.health - cardDisplay.damage;
-			//		Debug.Log("Monster take " + cardDisplay.damage + " damage!");
-			//	}
-
-			//	if (cardDisplay.health > 0)
-			//	{
-			//		player.currentHealth = player.currentHealth + cardDisplay.health;
-			//		if (player.currentHealth > player.health)
-			//		{
-			//			player.currentHealth = player.health;
-			//		}
-			//	}
-			//}
 		}
 	}
 

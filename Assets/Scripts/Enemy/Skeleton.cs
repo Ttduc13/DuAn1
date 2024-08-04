@@ -6,6 +6,7 @@ using static Unity.Burst.Intrinsics.X86.Avx;
 public class Skeleton : MonoBehaviour
 {
     public PlayerManager player;
+    public Enemy enemy;
     public int enemyShield = 0;
     public TextMeshProUGUI shieldValue;
     public GameObject shieldPopUp;
@@ -21,8 +22,8 @@ public class Skeleton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        updateShieldTxt();
-        shieldValue.text = enemyShield.ToString();
+        //updateShieldTxt();
+        //shieldValue.text = enemyShield.ToString();
     }
 
     public void Chomp()
@@ -30,20 +31,17 @@ public class Skeleton : MonoBehaviour
         eventPopUp1.SetActive(false);
         //Deal 11 damage.
         int damage = 11;
-        if (player.shield > 0)
+
+        if (player.shield <= damage)
+        {
+            player.currentHealth = player.currentHealth - damage + player.shield;
+            player.shield = 0;
+        }
+        else if (player.shield > damage)
         {
             player.shield -= damage;
-            if (player.shield <= 0) 
-            {
-                Debug.Log(player.shield);
-                player.currentHealth += player.shield;
-                player.shield = 0;
-            }
         }
-        if (player.shield == 0)
-        {
-            player.currentHealth -= damage;
-        }
+
         Debug.Log("Enemy use 'Chomp'!");
         Debug.Log("Player take " + damage + " damage!");
         player.updatePlayerHelthBar();
@@ -55,37 +53,22 @@ public class Skeleton : MonoBehaviour
         //Deal 7 damage, gain 5 Block.
         int damage = 7;
         enemyShield = 5;
-        //player.currentHealth -= damage;
-        if (player.shield > 0)
+
+        if (player.shield <= damage)
+        {
+            player.currentHealth = player.currentHealth - damage + player.shield;
+            player.shield = 0;
+        }
+        else if (player.shield > damage)
         {
             player.shield -= damage;
-            if (player.shield <= 0)
-            {
-                Debug.Log(player.shield);
-                player.currentHealth += player.shield;
-                player.shield = 0;
-            }
         }
-        if (player.shield == 0)
-        {
-            player.currentHealth -= damage;
-        }
+
         Debug.Log("Enemy use 'Thrash'!");
         Debug.Log("Player take " + damage + " damage!");
         player.updatePlayerHelthBar();
-    }
 
-    public void updateShieldTxt()
-    {
-        
-        if (enemyShield > 0)
-        {
-            shieldPopUp.SetActive(true);
-        }
-        if (enemyShield < 0)
-        {
-            shieldPopUp.SetActive(false);
-        }
+        enemy.shield = enemy.shield + enemyShield;
     }
 
     public void randomEvents()
