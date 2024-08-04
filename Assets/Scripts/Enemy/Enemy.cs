@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Threading.Tasks;
 using System;
 using TMPro;
+using static UnityEngine.EventSystems.EventTrigger;
 
 
 public class Enemy : MonoBehaviour
@@ -16,6 +17,7 @@ public class Enemy : MonoBehaviour
     public GameObject shieldPopUp;
 
     PlayerManager player;
+    CardFunction cardFunction;
 
     private Animator anim;
 
@@ -23,7 +25,13 @@ public class Enemy : MonoBehaviour
 
     public Skeleton skeleton;
 
+    public bool isVulnerable = false;
+    public int vulnerableCount;
 
+    public GameObject VulnerablePopUp;
+    public TextMeshProUGUI VulnerableTxt;
+
+    AudioManager audioManager;
 
     // skill
     public Transform skillPos;
@@ -34,9 +42,12 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerManager>();
+        cardFunction = FindAnyObjectByType<CardFunction>();
         anim = GetComponent<Animator>();
         currentHealth = health;
         updateEnemyHelthBar();
+
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     void Update()
@@ -44,6 +55,8 @@ public class Enemy : MonoBehaviour
         index = UnityEngine.Random.Range(0,2);
         updateShieldTxt();
         shieldValue.text = shield.ToString();
+        UpdateVulnerable();
+        VulnerableTxt.text = vulnerableCount.ToString();
     }
 
     public async void DamagePlayer()
@@ -57,6 +70,7 @@ public class Enemy : MonoBehaviour
         //player.updatePlayerHelthBar();
         //Instantiate(prefab[index], skillPos.position, Quaternion.identity);
         //anim.SetBool("isAttack", false);
+        audioManager.PlaySFX(audioManager.EnemyAtk_Scimitar);
         skeleton.runEvents();
     }
 
@@ -80,6 +94,30 @@ public class Enemy : MonoBehaviour
         if (shield <= 0)
         {
             shieldPopUp.SetActive(false);
+        }
+    }
+
+    public void CheckVulnerableCount()
+    {
+        if (vulnerableCount > 0)
+        {
+            vulnerableCount -= 1;
+        }
+        if (vulnerableCount <= 0)
+        {
+            vulnerableCount = 0;
+        }
+    }
+
+    void UpdateVulnerable()
+    {
+        if (vulnerableCount > 0)
+        {
+            VulnerablePopUp.SetActive(true);
+        }
+        if (vulnerableCount <= 0)
+        {
+            VulnerablePopUp.SetActive(false);
         }
     }
 }

@@ -21,6 +21,9 @@ public class PlayerManager : MonoBehaviour
     public TextMeshProUGUI shieldValue;
     public GameObject shieldPopUp;
 
+    public Animator animator;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,10 @@ public class PlayerManager : MonoBehaviour
 
         currentMana = mana;
         updateManaValue();
+
+        animator = GetComponent<Animator>();
+
+        
     }
 
     // Update is called once per frame

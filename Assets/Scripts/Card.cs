@@ -18,9 +18,12 @@ public class Card : MonoBehaviour
     GameManager gameManager;
 	Enemy demon;
 	PlayerManager player;
+	Enemy enemy;
 
 	CardDisplay cardDisplay;
 	CardFunction cardFunction;
+
+	public AudioManager audioManager;
 
     private void Start()
 	{
@@ -32,9 +35,12 @@ public class Card : MonoBehaviour
 
 		demon = FindObjectOfType<Enemy>();
         player = FindObjectOfType<PlayerManager>();
+		enemy = FindObjectOfType<Enemy>();
 
         cardDisplay = GetComponent<CardDisplay>();
 		cardFunction = GetComponent<CardFunction>();
+
+		audioManager = FindAnyObjectByType<AudioManager>();
     }
 	private void OnMouseDown()
 	{
@@ -44,6 +50,8 @@ public class Card : MonoBehaviour
 			{
                 if (!hasBeenPlayed)
                 {
+                    audioManager.PlaySFX(audioManager.cardSelect);
+
                     Instantiate(hollowCircle, transform.position, Quaternion.identity);
 
                     camAnim.SetTrigger("shake");
@@ -54,27 +62,17 @@ public class Card : MonoBehaviour
                     mm.availableCardSlots[handIndex] = true;
                     Invoke("MoveToDiscardPile", 1f);
 
-      //              if (cardFunction.damage > 0)
-      //              {
-      //                  demon.currentHealth = demon.currentHealth - cardFunction.damage;
-      //                  Debug.Log("Monster take " + cardFunction.damage + " damage!");
-						//demon.updateEnemyHelthBar();
-      //              }
-
-      //              if (cardFunction.health > 0)
-      //              {
-      //                  player.currentHealth = player.currentHealth + cardFunction.health;
-      //                  if (player.currentHealth > player.health)
-      //                  {
-      //                      player.currentHealth = player.health;
-      //                  }
-						//player.updatePlayerHelthBar();
-      //              }
-
 					cardFunction.Attack();
 					cardFunction.Defend();
 
-					player.currentMana = player.currentMana - cardFunction.manaCost;
+					if (enemy.vulnerableCount > 0) 
+					{
+                        cardFunction.Attack();
+						Debug.Log("Hit 2 times!");
+                    }
+                    cardFunction.EffectCard();
+
+                    player.currentMana = player.currentMana - cardFunction.manaCost;
 					player.updateManaValue();
                 }
             }

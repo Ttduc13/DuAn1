@@ -23,6 +23,8 @@ public class CardFunction : MonoBehaviour
 
     public bool isVulnerable = false;
 
+    AudioManager audioManager;
+
     void Start()
     {
         cardDisplay = GetComponent<CardDisplay>();
@@ -40,6 +42,7 @@ public class CardFunction : MonoBehaviour
         manaStr = cardDisplay.manaCost.ToString();
         manaCost = int.Parse(manaStr);
 
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -53,7 +56,8 @@ public class CardFunction : MonoBehaviour
         if (gameObject.layer == LayerMask.NameToLayer("AttackCard"))
         {
             Debug.Log("This is Attack Card");
-
+            player.animator.SetTrigger("attack");
+            audioManager.PlaySFX(audioManager.PlayerAtk_Sword);
             //if (enemy.shield > 0)
             //{
             //    enemy.shield -= damage;
@@ -101,12 +105,8 @@ public class CardFunction : MonoBehaviour
         //Vulnerable
         if (isVulnerable == true)
         {
-            buff = 2;
+            enemy.isVulnerable = true;
+            enemy.vulnerableCount = 3;
         }
-        else
-        {
-            buff = 1;
-        }
-
     }
 }

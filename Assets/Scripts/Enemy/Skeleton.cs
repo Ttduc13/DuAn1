@@ -14,9 +14,11 @@ public class Skeleton : MonoBehaviour
     public GameObject eventPopUp1;
     public GameObject eventPopUp2;
 
+    public Animator animation;
+
     void Start()
     {
-        
+        animation = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,8 +32,9 @@ public class Skeleton : MonoBehaviour
     {
         eventPopUp1.SetActive(false);
         //Deal 11 damage.
-        int damage = 11;
 
+        int damage = 11;
+        animation.SetTrigger("attack1");
         if (player.shield <= damage)
         {
             player.currentHealth = player.currentHealth - damage + player.shield;
@@ -51,6 +54,7 @@ public class Skeleton : MonoBehaviour
     {
         eventPopUp2.SetActive(false);
         //Deal 7 damage, gain 5 Block.
+        animation.SetTrigger("attack2");
         int damage = 7;
         enemyShield = 5;
 

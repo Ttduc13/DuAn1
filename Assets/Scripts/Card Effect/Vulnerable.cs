@@ -22,6 +22,6 @@ public class Vulnerable : MonoBehaviour
 
     public void BeVulnerable()
     {
-        cardFunction.buff = 2;
+        //cardFunction.buff = 2;
     }
 }

@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 	public GameObject EnemyTurn;
 	public GameObject PlayerTurn;
 
+	public AudioManager audioManager;
+
     private void Awake()
     {
         instance = this;
@@ -55,9 +57,12 @@ public class GameManager : MonoBehaviour
 	public async void HandlePlayerTurn()
 	{		
         enemy = FindObjectOfType<Enemy>();
+		enemy.CheckVulnerableCount();
         enemy.randomEvents();
+		audioManager.PlaySFX(audioManager.playerTurn);
         PlayerTurn.SetActive(true);
         isPlayerTurn = true;
+		player.shield = 0;
         menuManager.StartTurn();
 		menuManager.AutoShuffle();
         Debug.Log("Player Turn");
@@ -72,6 +77,7 @@ public class GameManager : MonoBehaviour
         EnemyTurn.SetActive(true);
         isPlayerTurn = false;
         Debug.Log("Enemy Turn");
+        audioManager.PlaySFX(audioManager.enemyTurn);
         enemy = FindObjectOfType<Enemy>();
 		await Task.Delay(900);
 		EnemyTurn.SetActive(false);
@@ -85,7 +91,6 @@ public class GameManager : MonoBehaviour
 		menuManager = FindObjectOfType<MenuManager>();
 		player = FindObjectOfType<PlayerManager>();
         UpdateGameState(GameState.PlayerTurn);
-        
     }
 
   //  public async void StartTurn()
