@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using System.Threading.Tasks;
 
 public class MenuManager : MonoBehaviour
 {
@@ -46,11 +47,7 @@ public class MenuManager : MonoBehaviour
         camAnim = Camera.main.GetComponent<Animator>();
         demon = FindObjectOfType<Enemy>();
         player=FindObjectOfType<PlayerManager>();
-        DrawCard();
-        DrawCard();
-        DrawCard();
-        DrawCard();
-        DrawCard();
+        StartTurn();
     }
 
     public void DrawCard()
@@ -95,6 +92,18 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public void AutoShuffle()
+    {
+        if (deck.Count <= 0)
+        {
+            foreach (Card card in discardPile)
+            {
+                deck.Add(card);
+            }
+            discardPile.Clear();
+        }
+    }
+
     public void EndTurn()
     {
         if (gameManager.isPlayerTurn == true)
@@ -107,8 +116,24 @@ public class MenuManager : MonoBehaviour
     {
         deckSizeText.text = deck.Count.ToString();
         discardPileSizeText.text = discardPile.Count.ToString();
-
+        //StartTurn();
         //demonHealth.text = demon.health.ToString();
         //playerHealth.text = player.health.ToString();
+    }
+
+    public async void StartTurn()
+    {
+        if (gameManager.isPlayerTurn == true) 
+        {
+            DrawCard();
+            await Task.Delay(100);
+            DrawCard();
+            await Task.Delay(100);
+            DrawCard();
+            await Task.Delay(100);
+            DrawCard();
+            await Task.Delay(100);
+            DrawCard();
+        }
     }
 }

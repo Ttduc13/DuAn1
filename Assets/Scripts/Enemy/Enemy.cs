@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
 using System;
+using TMPro;
 
 
 public class Enemy : MonoBehaviour
 {
     public int health;
     public int currentHealth;
+    public int shield;
 
-    [SerializeField] public int minDamage;
-    [SerializeField] public int maxDamage;
+    public TextMeshProUGUI shieldValue;
+    public GameObject shieldPopUp;
 
     PlayerManager player;
 
@@ -20,6 +22,8 @@ public class Enemy : MonoBehaviour
     public HealthBar healthBar;
 
     public Skeleton skeleton;
+
+
 
     // skill
     public Transform skillPos;
@@ -38,6 +42,8 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         index = UnityEngine.Random.Range(0,2);
+        updateShieldTxt();
+        shieldValue.text = shield.ToString();
     }
 
     public async void DamagePlayer()
@@ -62,5 +68,18 @@ public class Enemy : MonoBehaviour
     public void updateEnemyHelthBar()
     {
         healthBar.UpdateBar(currentHealth, health);
+    }
+
+    public void updateShieldTxt()
+    {
+
+        if (shield > 0)
+        {
+            shieldPopUp.SetActive(true);
+        }
+        if (shield <= 0)
+        {
+            shieldPopUp.SetActive(false);
+        }
     }
 }

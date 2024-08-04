@@ -14,15 +14,19 @@ public class CardFunction : MonoBehaviour
     public int health;
     public int manaCost;
 
+    public int buff = 1;
+
     public PlayerManager player;
-    public Enemy demon;
+    public Enemy enemy;
 
     public GameObject shieldPopUp;
+
+    public bool isVulnerable = false;
 
     void Start()
     {
         cardDisplay = GetComponent<CardDisplay>();
-        demon = FindObjectOfType<Enemy>();
+        enemy = FindObjectOfType<Enemy>();
         player = FindObjectOfType<PlayerManager>();
 
         cardDisplay.UpdateCard();
@@ -49,9 +53,34 @@ public class CardFunction : MonoBehaviour
         if (gameObject.layer == LayerMask.NameToLayer("AttackCard"))
         {
             Debug.Log("This is Attack Card");
-            demon.currentHealth = demon.currentHealth - damage;
-            Debug.Log("Monster take " + damage + " damage!");
-            demon.updateEnemyHelthBar();
+
+            //if (enemy.shield > 0)
+            //{
+            //    enemy.shield -= damage;
+            //    if (enemy.shield <= 0)
+            //    {
+            //        Debug.Log(enemy.shield);
+            //        enemy.currentHealth += enemy.shield;
+            //        enemy.shield = 0;
+            //    }
+            //}
+            //if (enemy.shield == 0)
+            //{
+            //    enemy.currentHealth -= damage;
+            //}
+
+            if (enemy.shield <= damage * buff) 
+            {
+                enemy.currentHealth = enemy.currentHealth - damage * buff + enemy.shield;
+                enemy.shield = 0;
+            }
+            else if (enemy.shield > damage * buff)
+            {
+                enemy.shield -= damage * buff;
+            }
+
+            Debug.Log("Monster take " + damage * buff + " damage!");
+            enemy.updateEnemyHelthBar();
         }
     }
 
@@ -65,5 +94,19 @@ public class CardFunction : MonoBehaviour
             }
             Debug.Log("This is Defend Card");
         }
+    }
+
+    public void EffectCard()
+    {
+        //Vulnerable
+        if (isVulnerable == true)
+        {
+            buff = 2;
+        }
+        else
+        {
+            buff = 1;
+        }
+
     }
 }
