@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bash
   m_EditorClassIdentifier: 
   Name: Bash
-  description: Deal 8 damage. Apply 2 Vulnerable.
+  description: Deal 8 damage. Apply 3 Vulnerable.
   artwork: {fileID: 813706539, guid: 0ff39e46e7fc8d549b8310a37d707819, type: 3}
   manaCost: 2
   attack: 8
