@@ -120,4 +120,13 @@ public class Enemy : MonoBehaviour
             VulnerablePopUp.SetActive(false);
         }
     }
+
+    public bool CheckAlive()
+    {
+        if(currentHealth == 0)
+        {
+            return false;
+        }
+        return true;
+    }
 }

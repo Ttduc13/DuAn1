@@ -16,7 +16,7 @@ public class MenuManager : MonoBehaviour
     public List<Card> discardPile;
     public TextMeshProUGUI discardPileSizeText;
 
-    Enemy demon;
+    Enemy enemy;
     public TextMeshProUGUI demonHealth;
 
     PlayerManager player;
@@ -45,7 +45,7 @@ public class MenuManager : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         camAnim = Camera.main.GetComponent<Animator>();
-        demon = FindObjectOfType<Enemy>();
+        enemy = FindObjectOfType<Enemy>();
         player=FindObjectOfType<PlayerManager>();
         StartTurn();
     }
@@ -116,9 +116,9 @@ public class MenuManager : MonoBehaviour
     {
         deckSizeText.text = deck.Count.ToString();
         discardPileSizeText.text = discardPile.Count.ToString();
-        //StartTurn();
-        //demonHealth.text = demon.health.ToString();
-        //playerHealth.text = player.health.ToString();
+
+        IsWinning();
+        isLosing();
     }
 
     public async void StartTurn()
@@ -134,6 +134,22 @@ public class MenuManager : MonoBehaviour
             DrawCard();
             await Task.Delay(100);
             DrawCard();
+        }
+    }
+
+    public void IsWinning()
+    {
+        if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
+        {
+            GameManager.instance.UpdateGameState(GameState.Victory);
+        }
+    }
+
+    public void isLosing()
+    {
+        if (player.isDead == true)
+        {
+            GameManager.instance.UpdateGameState(GameState.Lose);
         }
     }
 }

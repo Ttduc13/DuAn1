@@ -14,11 +14,11 @@ public class Skeleton : MonoBehaviour
     public GameObject eventPopUp1;
     public GameObject eventPopUp2;
 
-    public Animator animation;
+    public Animator animator;
 
     void Start()
     {
-        animation = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -26,6 +26,7 @@ public class Skeleton : MonoBehaviour
     {
         //updateShieldTxt();
         //shieldValue.text = enemyShield.ToString();
+        Dead();
     }
 
     public void Chomp()
@@ -34,7 +35,7 @@ public class Skeleton : MonoBehaviour
         //Deal 11 damage.
 
         int damage = 11;
-        animation.SetTrigger("attack1");
+        animator.SetTrigger("attack1");
         if (player.shield <= damage)
         {
             player.currentHealth = player.currentHealth - damage + player.shield;
@@ -54,7 +55,7 @@ public class Skeleton : MonoBehaviour
     {
         eventPopUp2.SetActive(false);
         //Deal 7 damage, gain 5 Block.
-        animation.SetTrigger("attack2");
+        animator.SetTrigger("attack2");
         int damage = 7;
         enemyShield = 5;
 
@@ -97,6 +98,15 @@ public class Skeleton : MonoBehaviour
         if (events == 1)
         {
             Thrash();
+        }
+    }
+
+    public void Dead()
+    {
+        if (enemy.CheckAlive() == false)
+        {
+            Debug.Log("Enemy is dead!");
+            animator.SetBool("isDeath", true);
         }
     }
 }

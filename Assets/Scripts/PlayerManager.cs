@@ -21,6 +21,8 @@ public class PlayerManager : MonoBehaviour
     public TextMeshProUGUI shieldValue;
     public GameObject shieldPopUp;
 
+    public bool isDead = false;
+
     public Animator animator;
 
 
@@ -44,6 +46,8 @@ public class PlayerManager : MonoBehaviour
         updatePlayerHelthBar();
         updateManaValue();
         updateShieldTxt();
+
+        CheckDeath();
     }
 
     public void updatePlayerHelthBar()
@@ -69,13 +73,12 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void damagePopUp()
+    public void CheckDeath()
     {
-        damaged = health - currentHealth;
-        if (damaged > 0) 
+        if (currentHealth <= 0) 
         {
-            GameObject popUp = Instantiate(popUpPrefab, gameObject.transform.position, Quaternion.identity);
-            popUp.GetComponentInChildren<TMP_Text>().text = damaged.ToString();
+            isDead = true;
+            animator.SetBool("isDeath", true);
         }
     }
 }

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 	public GameState State;
 	public static event Action<GameState> OnGameStateChanged;
 
-	public bool isPlayerTurn = false;
+	public bool isPlayerTurn = true;
 
 	Enemy enemy;
 
@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
 	public GameObject EnemyTurn;
 	public GameObject PlayerTurn;
+
+	public GameOver gameOver;
 
 	public AudioManager audioManager;
 
@@ -44,8 +46,16 @@ public class GameManager : MonoBehaviour
 				HandleEnemyTurn();
                 break;
 			case GameState.Victory:
+				HandleVictory();
 				break;
             case GameState.Lose:
+                HandleLose();
+                break;
+			case GameState.NextLevel:
+				HandleNexlLevel();
+                break;
+			case GameState.EndGame:
+				HandleEndGame();
                 break;
 			default:
 				throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
@@ -56,7 +66,7 @@ public class GameManager : MonoBehaviour
 
 	public async void HandlePlayerTurn()
 	{		
-        enemy = FindObjectOfType<Enemy>();
+        
 		enemy.CheckVulnerableCount();
         enemy.randomEvents();
 		audioManager.PlaySFX(audioManager.playerTurn);
@@ -74,11 +84,11 @@ public class GameManager : MonoBehaviour
 
 	public async void HandleEnemyTurn()
 	{
-        EnemyTurn.SetActive(true);
-        isPlayerTurn = false;
-        Debug.Log("Enemy Turn");
-        audioManager.PlaySFX(audioManager.enemyTurn);
-        enemy = FindObjectOfType<Enemy>();
+		EnemyTurn.SetActive(true);
+		isPlayerTurn = false;
+		Debug.Log("Enemy Turn");
+		audioManager.PlaySFX(audioManager.enemyTurn);
+
 		await Task.Delay(900);
 		EnemyTurn.SetActive(false);
         enemy.DamagePlayer();
@@ -86,26 +96,39 @@ public class GameManager : MonoBehaviour
         UpdateGameState(GameState.PlayerTurn);
     }
 
-    private void Start()
+	public async void HandleVictory()
 	{
-		menuManager = FindObjectOfType<MenuManager>();
-		player = FindObjectOfType<PlayerManager>();
-        UpdateGameState(GameState.PlayerTurn);
+		Debug.Log("Win!");
+        UpdateGameState(GameState.NextLevel);
+        await Task.Delay(100);
     }
 
-  //  public async void StartTurn()
-  //  {
-  //      menuManager.DrawCard();
-		//await Task.Delay(100);
-  //      menuManager.DrawCard();
-  //      await Task.Delay(100);
-  //      menuManager.DrawCard();
-  //      await Task.Delay(100);
-  //      menuManager.DrawCard();
-  //      await Task.Delay(100);
-  //      menuManager.DrawCard();
-  //  }
+    public async void HandleLose()
+    {
+        Debug.Log("Lose!");
+        UpdateGameState(GameState.EndGame);
+        await Task.Delay(100);
+    }
 
+	public void HandleNexlLevel()
+	{
+        
+    }
+
+	public void HandleEndGame()
+	{
+        gameOver.Setup();
+    }
+
+    private void Start()
+	{
+		//menuManager = FindObjectOfType<MenuManager>();
+		player = FindObjectOfType<PlayerManager>();
+        enemy = FindObjectOfType<Enemy>();
+		//gameOver = FindObjectOfType<GameOver>();
+
+        UpdateGameState(GameState.PlayerTurn);
+    }
 }
 
 public enum GameState
@@ -114,6 +137,8 @@ public enum GameState
 	EnemyTurn,
 	Victory,
 	Lose,
+	NextLevel,
+	EndGame,
 }
 
 

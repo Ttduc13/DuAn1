@@ -83,6 +83,11 @@ public class CardFunction : MonoBehaviour
                 enemy.shield -= damage * buff;
             }
 
+            if (enemy.currentHealth <= 0)
+            {
+                enemy.currentHealth = 0;   
+            }
+
             Debug.Log("Monster take " + damage * buff + " damage!");
             enemy.updateEnemyHelthBar();
         }
