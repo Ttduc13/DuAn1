@@ -4,7 +4,9 @@ using TMPro;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
-{ 
+{
+    public int money;
+
     public int health;
     public int currentHealth = 0;
 

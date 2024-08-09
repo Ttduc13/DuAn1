@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
 	public GameObject PlayerTurn;
 
 	public GameOver gameOver;
+	public EndScene endScene;
 
 	public AudioManager audioManager;
 
@@ -112,7 +113,7 @@ public class GameManager : MonoBehaviour
 
 	public void HandleNexlLevel()
 	{
-        
+        endScene.SetUp();
     }
 
 	public void HandleEndGame()
