@@ -2915,7 +2915,7 @@ PrefabInstance:
     - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: skillPos
       value: 
-      objectReference: {fileID: 1298681718}
+      objectReference: {fileID: 1819370895}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -6610,7 +6610,7 @@ PrefabInstance:
     - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: skillPos
       value: 
-      objectReference: {fileID: 1298681718}
+      objectReference: {fileID: 1819370895}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -9580,7 +9580,7 @@ PrefabInstance:
     - target: {fileID: 7682859164395696646, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
       propertyPath: skillPos
       value: 
-      objectReference: {fileID: 1298681718}
+      objectReference: {fileID: 1819370895}
     - target: {fileID: 9144713381094378128, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
