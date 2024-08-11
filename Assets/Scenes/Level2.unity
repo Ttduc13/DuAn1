@@ -4239,6 +4239,8 @@ MonoBehaviour:
   PlayerAtk_Sword: {fileID: 8300000, guid: a914a02353eb4d9469e4c10f8c2952e6, type: 3}
   EnemyAtk_Scimitar: {fileID: 8300000, guid: 7b03fc5d158d48c4eba4fa86a9ef9892, type: 3}
   Enemy_Buff: {fileID: 8300000, guid: 7484d501c122e3f40ae82c89de7c1d93, type: 3}
+  Boss1: {fileID: 0}
+  Boss2: {fileID: 0}
 --- !u!81 &1067114524
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5121,7 +5123,7 @@ Transform:
   m_GameObject: {fileID: 1298681717}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -0.82, z: -0.014827803}
+  m_LocalPosition: {x: 4.97, y: -0.04, z: -0.014827803}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7869,7 +7871,7 @@ Transform:
   m_GameObject: {fileID: 1819370893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.7, y: -1.12, z: -0.014827803}
+  m_LocalPosition: {x: -3.6, y: -0.27, z: -0.014827803}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

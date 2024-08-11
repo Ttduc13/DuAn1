@@ -3534,6 +3534,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985511174}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -3756,6 +3760,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Card
       objectReference: {fileID: 0}
+    - target: {fileID: 2390803918176075776, guid: 35890e4766611fa4b8bfcb5e81f7dbb3, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985511174}
     - target: {fileID: 2417319971677650808, guid: 35890e4766611fa4b8bfcb5e81f7dbb3, type: 3}
       propertyPath: card
       value: 
@@ -4852,6 +4860,9 @@ MonoBehaviour:
   CardDeal: {fileID: 8300000, guid: 97ad6e234d5d1504ba9fb899ffbbe575, type: 3}
   PlayerAtk_Sword: {fileID: 8300000, guid: a914a02353eb4d9469e4c10f8c2952e6, type: 3}
   EnemyAtk_Scimitar: {fileID: 8300000, guid: 7b03fc5d158d48c4eba4fa86a9ef9892, type: 3}
+  Enemy_Buff: {fileID: 0}
+  Boss1: {fileID: 0}
+  Boss2: {fileID: 0}
 --- !u!81 &1067114524
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5055,6 +5066,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985511174}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -6499,6 +6514,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Card
       objectReference: {fileID: 0}
+    - target: {fileID: 2390803918176075776, guid: 35890e4766611fa4b8bfcb5e81f7dbb3, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985511174}
     - target: {fileID: 3858180061092027715, guid: 35890e4766611fa4b8bfcb5e81f7dbb3, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -6977,6 +6996,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985511174}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -7483,6 +7506,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985511174}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -7631,6 +7658,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985511174}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -9657,6 +9688,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959857799}
   m_CullTransparentMesh: 1
+--- !u!1 &1985511173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1985511174}
+  m_Layer: 0
+  m_Name: Skil1
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1985511174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985511173}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.97, y: -0.08, z: -0.014827803}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2006752638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2020000277217636489, guid: 35890e4766611fa4b8bfcb5e81f7dbb3, type: 3}
@@ -10545,6 +10607,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7682859164395696646, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985511174}
     - target: {fileID: 9144713381094378128, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10771,6 +10837,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985511174}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -10987,6 +11057,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Card
       objectReference: {fileID: 0}
+    - target: {fileID: 2390803918176075776, guid: 35890e4766611fa4b8bfcb5e81f7dbb3, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985511174}
     - target: {fileID: 3858180061092027715, guid: 35890e4766611fa4b8bfcb5e81f7dbb3, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -11148,4 +11222,5 @@ SceneRoots:
   - {fileID: 1653215722}
   - {fileID: 807067929}
   - {fileID: 1819370895}
+  - {fileID: 1985511174}
   - {fileID: 1414116744}

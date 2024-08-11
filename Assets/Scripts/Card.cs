@@ -95,6 +95,6 @@ public class Card : MonoBehaviour
 
     void Update()
     {
-        index = UnityEngine.Random.Range(0, 1);
+        index = UnityEngine.Random.Range(0, 2);
     }
 }
