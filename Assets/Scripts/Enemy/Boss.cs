@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static Unity.Burst.Intrinsics.X86.Avx;
+using System.Threading.Tasks;
 public class Boss : MonoBehaviour
 {
     public PlayerManager player;
@@ -17,10 +18,12 @@ public class Boss : MonoBehaviour
     public GameObject eventPopUp3;
 
     public Animator animator;
+    AudioManager audioManager;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioManager = FindAnyObjectByType<AudioManager>();
         enemy.isBoss = true;
     }
 
@@ -32,7 +35,7 @@ public class Boss : MonoBehaviour
         Dead();
     }
 
-    public void Rush()
+    public async void Rush()
     {
         CheckPlayer();
         eventPopUp1.SetActive(false);
@@ -53,9 +56,12 @@ public class Boss : MonoBehaviour
         Debug.Log("Enemy use 'Rush'!");
         Debug.Log("Player take " + damage + " damage!");
         player.updatePlayerHelthBar();
+
+        await Task.Delay(300);
+        audioManager.PlaySFX(audioManager.Boss1);
     }
 
-    public void Thrash()
+    public async void Thrash()
     {
         CheckPlayer();
         eventPopUp2.SetActive(false);
@@ -79,9 +85,12 @@ public class Boss : MonoBehaviour
         player.updatePlayerHelthBar();
 
         enemy.shield = enemy.shield + enemyShield;
+
+        await Task.Delay(300);
+        audioManager.PlaySFX(audioManager.Boss2);
     }
 
-    public void SkullBash()
+    public async void SkullBash()
     {
         CheckPlayer();
         //Deal 6 damage and apply 2 Vulnerable
@@ -99,6 +108,9 @@ public class Boss : MonoBehaviour
         {
             player.shield -= damage;
         }
+
+        await Task.Delay(300);
+        audioManager.PlaySFX(audioManager.Boss2);
     }
 
     public void CheckPlayer()

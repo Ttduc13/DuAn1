@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip PlayerAtk_Sword;
     public AudioClip EnemyAtk_Scimitar;
     public AudioClip Enemy_Buff;
+    public AudioClip Boss1;
+    public AudioClip Boss2;
 
     void Start()
     {
