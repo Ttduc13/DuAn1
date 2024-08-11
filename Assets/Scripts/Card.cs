@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class Card : MonoBehaviour
@@ -24,6 +26,10 @@ public class Card : MonoBehaviour
 	CardFunction cardFunction;
 
 	public AudioManager audioManager;
+
+    public Transform skillPos;
+    public GameObject[] prefab;
+    public int index;
 
     private void Start()
 	{
@@ -84,8 +90,11 @@ public class Card : MonoBehaviour
 		Instantiate(effect, transform.position, Quaternion.identity);
 		mm.discardPile.Add(this);
 		gameObject.SetActive(false);
-	}
+        Instantiate(prefab[index], skillPos.position, Quaternion.identity);
+    }
 
-
-
+    void Update()
+    {
+        index = UnityEngine.Random.Range(0, 1);
+    }
 }

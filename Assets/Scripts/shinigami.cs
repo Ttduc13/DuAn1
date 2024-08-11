@@ -31,7 +31,7 @@ public class shinigami : MonoBehaviour
 
     void Update()
     {
-        index = UnityEngine.Random.Range(0,2);
+        index = UnityEngine.Random.Range(0,1);
     }
 
     public async void DamagePlayer()

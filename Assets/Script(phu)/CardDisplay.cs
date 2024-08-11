@@ -22,6 +22,8 @@ public class CardDisplay : MonoBehaviour
     public string health;
     public string manaCost;
 
+    public int index;
+
     void Start()
     {
         nameText.text = card.name;
@@ -43,5 +45,8 @@ public class CardDisplay : MonoBehaviour
         damage = card.attack.ToString();
         health = card.health.ToString();
         manaCost = card.manaCost.ToString();
+        index = UnityEngine.Random.Range(0, 1);
     }
+
+
 }
