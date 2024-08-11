@@ -238,6 +238,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1653215722}
     m_Modifications:
     - target: {fileID: 1714499493272958569, guid: 834f0c721193fff4b89e2e61e9cf9b98, type: 3}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714499493272958569, guid: 834f0c721193fff4b89e2e61e9cf9b98, type: 3}
       propertyPath: manaValue
       value: 
       objectReference: {fileID: 2014224719}
@@ -245,6 +249,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 3547181515425104863, guid: 834f0c721193fff4b89e2e61e9cf9b98, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6188002808929111594, guid: 834f0c721193fff4b89e2e61e9cf9b98, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.67
@@ -964,7 +972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &154476481
 RectTransform:
   m_ObjectHideFlags: 0

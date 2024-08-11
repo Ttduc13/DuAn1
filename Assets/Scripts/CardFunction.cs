@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Unity.Burst.Intrinsics.Arm;
-using static UnityEditor.Handles;
 
 public class CardFunction : MonoBehaviour
 {
