@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class PlayerManager : MonoBehaviour
     public TextMeshProUGUI shieldValue;
     public GameObject shieldPopUp;
 
+    public bool isVulnerable = false;
+    public int vulnerableCount = 0;
+    public GameObject vulnerablePopUp;
+    public TextMeshProUGUI VulnerableTxt;
+
     public bool isDead = false;
 
     public Animator animator;
@@ -31,7 +37,14 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = health;
+        if (SceneManager.GetActiveScene().buildIndex > 2 )
+        {
+            currentHealth = PlayerPrefs.GetInt("playerHealth");
+        }
+        else
+        {
+            currentHealth = health;
+        }
         updatePlayerHelthBar();
 
         currentMana = mana;
@@ -48,8 +61,10 @@ public class PlayerManager : MonoBehaviour
         updatePlayerHelthBar();
         updateManaValue();
         updateShieldTxt();
-
+        Vulnerabled();
         CheckDeath();
+
+        VulnerableTxt.text = vulnerableCount.ToString();
     }
 
     public void updatePlayerHelthBar()
@@ -81,6 +96,29 @@ public class PlayerManager : MonoBehaviour
         {
             isDead = true;
             animator.SetBool("isDeath", true);
+        }
+    }
+
+    public void Vulnerabled()
+    {
+        if(vulnerableCount <= 0)
+        {
+            vulnerablePopUp.SetActive(false);
+        }
+        else
+        {
+            vulnerablePopUp.SetActive(true);
+        }
+    }
+    public void CheckVulnerableCount()
+    {
+        if (vulnerableCount > 0)
+        {
+            vulnerableCount -= 1;
+        }
+        if (vulnerableCount <= 0)
+        {
+            vulnerableCount = 0;
         }
     }
 }

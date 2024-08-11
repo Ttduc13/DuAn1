@@ -58,21 +58,6 @@ public class CardFunction : MonoBehaviour
             Debug.Log("This is Attack Card");
             player.animator.SetTrigger("attack");
             audioManager.PlaySFX(audioManager.PlayerAtk_Sword);
-            //if (enemy.shield > 0)
-            //{
-            //    enemy.shield -= damage;
-            //    if (enemy.shield <= 0)
-            //    {
-            //        Debug.Log(enemy.shield);
-            //        enemy.currentHealth += enemy.shield;
-            //        enemy.shield = 0;
-            //    }
-            //}
-            //if (enemy.shield == 0)
-            //{
-            //    enemy.currentHealth -= damage;
-            //}
-
             if (enemy.shield <= damage * buff) 
             {
                 enemy.currentHealth = enemy.currentHealth - damage * buff + enemy.shield;

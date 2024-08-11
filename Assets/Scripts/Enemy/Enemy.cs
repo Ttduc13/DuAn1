@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     public HealthBar healthBar;
 
     public Skeleton skeleton;
+    public Boss boss;
 
     public bool isVulnerable = false;
     public int vulnerableCount;
@@ -32,6 +33,8 @@ public class Enemy : MonoBehaviour
     public TextMeshProUGUI VulnerableTxt;
 
     AudioManager audioManager;
+
+    public bool isBoss = false;
 
     // skill
     public Transform skillPos;
@@ -70,13 +73,28 @@ public class Enemy : MonoBehaviour
         //player.updatePlayerHelthBar();
         //Instantiate(prefab[index], skillPos.position, Quaternion.identity);
         //anim.SetBool("isAttack", false);
-        audioManager.PlaySFX(audioManager.EnemyAtk_Scimitar);
-        skeleton.runEvents();
+        if (isBoss == false)
+        {
+            audioManager.PlaySFX(audioManager.EnemyAtk_Scimitar);
+            skeleton.runEvents();
+        }
+        else
+        {
+            boss.runEvents();
+        }
     }
 
     public void randomEvents()
     {
-        skeleton.randomEvents();
+        if (isBoss == false)
+        {
+            skeleton.randomEvents();
+        }
+        else
+        {
+            boss.randomEvents();
+        }
+        
     }
 
     public void updateEnemyHelthBar()
