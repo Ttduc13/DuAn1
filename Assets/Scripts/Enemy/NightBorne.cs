@@ -22,7 +22,6 @@ public class NightBorne : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
         audioManager = FindAnyObjectByType<AudioManager>();
         enemy.isNightBorne = true;
     }
