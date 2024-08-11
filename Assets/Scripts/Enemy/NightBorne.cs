@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static Unity.Burst.Intrinsics.X86.Avx;
-public class Skeleton : MonoBehaviour
+public class NightBorne : MonoBehaviour
 {
     public PlayerManager player;
     public Enemy enemy;
@@ -19,7 +19,7 @@ public class Skeleton : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        enemy.isSkeleton = true;
+        enemy.isNightBorne = true;
     }
 
     // Update is called once per frame

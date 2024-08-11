@@ -23,8 +23,17 @@ public class Enemy : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public Bat bat;
+    public bool isBat = false;
+
     public Skeleton skeleton;
+    public bool isSkeleton = false;
+
+    public NightBorne nightBorne;
+    public bool isNightBorne = false;
+
     public Boss boss;
+    public bool isBoss = false;
 
     public bool isVulnerable = false;
     public int vulnerableCount;
@@ -33,8 +42,6 @@ public class Enemy : MonoBehaviour
     public TextMeshProUGUI VulnerableTxt;
 
     AudioManager audioManager;
-
-    public bool isBoss = false;
 
     // skill
     public Transform skillPos;
@@ -73,12 +80,20 @@ public class Enemy : MonoBehaviour
         //player.updatePlayerHelthBar();
         //Instantiate(prefab[index], skillPos.position, Quaternion.identity);
         //anim.SetBool("isAttack", false);
-        if (isBoss == false)
+        if (isBat == true)
+        {
+            bat.runEvents();
+        }
+        if (isSkeleton == true)
         {
             audioManager.PlaySFX(audioManager.EnemyAtk_Scimitar);
             skeleton.runEvents();
         }
-        else
+        if (isNightBorne == true)
+        {
+            nightBorne.runEvents();
+        }
+        if (isBoss == true)
         {
             boss.runEvents();
         }
@@ -86,11 +101,19 @@ public class Enemy : MonoBehaviour
 
     public void randomEvents()
     {
-        if (isBoss == false)
+        if (isBat == true)
+        {
+            bat.randomEvents();
+        }
+        if (isSkeleton == true)
         {
             skeleton.randomEvents();
         }
-        else
+        if (isNightBorne == true)
+        {
+            nightBorne.randomEvents();
+        }
+        if (isBoss == true)
         {
             boss.randomEvents();
         }
