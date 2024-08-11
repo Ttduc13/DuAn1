@@ -848,7 +848,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &154476481
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1704,6 +1704,8 @@ MonoBehaviour:
   shieldValue: {fileID: 631316574}
   shieldPopUp: {fileID: 151834466}
   healthBar: {fileID: 1056971865}
+  bat: {fileID: 0}
+  isBat: 0
   skeleton: {fileID: 0}
   isSkeleton: 0
   nightBorne: {fileID: 442428920}

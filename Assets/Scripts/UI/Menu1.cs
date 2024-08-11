@@ -11,16 +11,16 @@ public class Menu1 : MonoBehaviour
     
     public void Man2()
     {
-        SceneManager.LoadScene("Scene2");
+        SceneManager.LoadScene("Level2");
     }
 
     public void Man3()
     {
-        SceneManager.LoadScene("Scene3");
+        SceneManager.LoadScene("Level3");
     }    
 
     public void Man4()
     {
-        SceneManager.LoadScene("Scene4");
+        SceneManager.LoadScene("LevelBoss");
     }    
 }
