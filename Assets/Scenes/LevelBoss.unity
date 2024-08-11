@@ -7868,7 +7868,7 @@ Transform:
   m_GameObject: {fileID: 1819370893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -1.36, z: -0.014827803}
+  m_LocalPosition: {x: -3.66, y: -0.17, z: -0.014827803}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7959,6 +7959,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1428024856}
     - target: {fileID: 7944281523234546132, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944281523234546132, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
       propertyPath: health
       value: 90
       objectReference: {fileID: 0}
@@ -7968,6 +7972,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7944281523234546132, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
       propertyPath: skeleton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944281523234546132, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1819370895}
+    - target: {fileID: 7944281523234546132, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: prefab.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944281523234546132, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: prefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 8046618010240588969, guid: 4204ee0c968f9744689c21d0bb302bee, type: 3}
+    - target: {fileID: 7944281523234546132, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: prefab.Array.data[1]
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8824580019035010582, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
@@ -9012,6 +9032,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959857799}
   m_CullTransparentMesh: 1
+--- !u!1 &1985785203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1985785204}
+  m_Layer: 0
+  m_Name: Skil1
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1985785204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985785203}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.9, y: 0.8, z: -0.014827803}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2006752638 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2020000277217636489, guid: 35890e4766611fa4b8bfcb5e81f7dbb3, type: 3}
@@ -9917,6 +9968,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
+      propertyPath: index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
+      propertyPath: skillPos
+      value: 
+      objectReference: {fileID: 1985785204}
+    - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
+      propertyPath: prefab.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
+      propertyPath: prefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 7405149250492094859, guid: e9d797613707b3a41a7bb2cf9ebe9f40, type: 3}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -10294,4 +10361,5 @@ SceneRoots:
   - {fileID: 1653215722}
   - {fileID: 807067929}
   - {fileID: 1819370895}
+  - {fileID: 1985785204}
   - {fileID: 1414116744}

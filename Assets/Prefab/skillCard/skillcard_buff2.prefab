@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3644085826236568055}
   - component: {fileID: 5030275857079757700}
   - component: {fileID: 3461274160449636498}
+  - component: {fileID: 7375895323551467753}
   m_Layer: 0
   m_Name: skillcard_buff2
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 11
   m_Sprite: {fileID: 1204086717, guid: 7d54b86935f1ebf4ab18030e37b21d3e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -106,3 +107,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7375895323551467753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797447513015276668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 787bb457120a2f64493eedaecefd7ce3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerDeah: 1

@@ -1717,8 +1717,9 @@ MonoBehaviour:
   VulnerablePopUp: {fileID: 817769393}
   VulnerableTxt: {fileID: 1732715739}
   skillPos: {fileID: 0}
-  prefab: []
-  index: 0
+  prefab:
+  - {fileID: 8837674897456636647, guid: bf7316911f2023544aad83a71e7aedac, type: 3}
+  index: 1
 --- !u!1 &448317337 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5785026706827001701, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
@@ -8703,7 +8704,7 @@ Transform:
   m_GameObject: {fileID: 1819370893}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -1.36, z: -0.014827803}
+  m_LocalPosition: {x: -3.65, y: -0.2, z: -0.014827803}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

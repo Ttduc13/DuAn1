@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        index = UnityEngine.Random.Range(0,2);
+        index = UnityEngine.Random.Range(0, 1);
         updateShieldTxt();
         shieldValue.text = shield.ToString();
         UpdateVulnerable();
@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
         //player.damagePopUp();
         //player.currentHealth = player.currentHealth - damage;
         //player.updatePlayerHelthBar();
-        //Instantiate(prefab[index], skillPos.position, Quaternion.identity);
+        Instantiate(prefab[index], skillPos.position, Quaternion.identity);
         //anim.SetBool("isAttack", false);
         if (isBat == true)
         {
