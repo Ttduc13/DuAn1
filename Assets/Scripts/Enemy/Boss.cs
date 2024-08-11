@@ -21,6 +21,7 @@ public class Boss : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        enemy.isBoss = true;
     }
 
     // Update is called once per frame
