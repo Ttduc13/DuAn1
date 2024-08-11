@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8536460995681932426}
   - component: {fileID: 5764112010731402180}
   - component: {fileID: 8780474807066254842}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 3917351430572668280}
   - component: {fileID: 8853820442385458994}
   - component: {fileID: 5786644711643556473}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ArtworkMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 4968654293614527590}
   - component: {fileID: 7740648901605032846}
   - component: {fileID: 222759400225347448}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8292980905166804270}
   - component: {fileID: 5907307390012714863}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Artwork
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 2896195838724600783}
   - component: {fileID: 6795247757644677961}
   - component: {fileID: 7144819602726574682}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Card Template
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 5784231222192080369}
   - component: {fileID: 3414032836352539482}
   - component: {fileID: 8006542569710427544}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,9 +493,9 @@ GameObject:
   - component: {fileID: 2816478502995663530}
   - component: {fileID: 4538804441088309251}
   - component: {fileID: 3876195287864209401}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Defend
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -556,6 +556,7 @@ MonoBehaviour:
   damage: 0
   health: 0
   manaCost: 0
+  index: 0
 --- !u!114 &7682859164395696646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -572,6 +573,13 @@ MonoBehaviour:
   handIndex: 0
   effect: {fileID: 3757043119740318057, guid: 2d563df92650c4c45bfab8ac41590b76, type: 3}
   hollowCircle: {fileID: 6307824639786034265, guid: c4be0973762ae534b9c0805fdc772559, type: 3}
+  audioManager: {fileID: 0}
+  skillPos: {fileID: 0}
+  prefab:
+  - {fileID: 3218625401062202110, guid: 71561b2b1d4a27d49a3c42d9f138f61f, type: 3}
+  - {fileID: 2744943725091771616, guid: e3e6c3bb2e65b2e4f80cec8a225f6da6, type: 3}
+  - {fileID: 7405149250492094859, guid: e9d797613707b3a41a7bb2cf9ebe9f40, type: 3}
+  index: 0
 --- !u!61 &2816478502995663530
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -654,6 +662,11 @@ MonoBehaviour:
   damage: 0
   health: 0
   manaCost: 0
+  buff: 1
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  shieldPopUp: {fileID: 0}
+  isVulnerable: 0
 --- !u!1 &5759659638045424522
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +679,7 @@ GameObject:
   - component: {fileID: 8894247523860055158}
   - component: {fileID: 1771015398943086709}
   - component: {fileID: 2729293266282755508}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -761,7 +774,7 @@ GameObject:
   - component: {fileID: 2310998206187319814}
   - component: {fileID: 3659738007604506412}
   - component: {fileID: 2465932803107230825}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
