@@ -66,9 +66,9 @@ public class GameManager : MonoBehaviour
     }
 
 	public async void HandlePlayerTurn()
-	{		
-        
-		enemy.CheckVulnerableCount();
+	{
+		player.CheckVulnerableCount();
+        enemy.CheckVulnerableCount();
         enemy.randomEvents();
 		audioManager.PlaySFX(audioManager.playerTurn);
         PlayerTurn.SetActive(true);
@@ -99,14 +99,12 @@ public class GameManager : MonoBehaviour
 
 	public async void HandleVictory()
 	{
-		Debug.Log("Win!");
         UpdateGameState(GameState.NextLevel);
         await Task.Delay(100);
     }
 
     public async void HandleLose()
     {
-        Debug.Log("Lose!");
         UpdateGameState(GameState.EndGame);
         await Task.Delay(100);
     }

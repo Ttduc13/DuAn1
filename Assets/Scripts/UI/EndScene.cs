@@ -16,6 +16,8 @@ public class EndScene : MonoBehaviour
     {
         gameObject.SetActive(true);
         SetGoldReward();
+        PlayerPrefs.SetInt("playerHealth", player.currentHealth);
+        Debug.Log(PlayerPrefs.GetInt("playerHealth"));
     }
 
     public void NextButton()
@@ -34,8 +36,14 @@ public class EndScene : MonoBehaviour
         goldRewardValue.text = goldReward.ToString() + " Gold";
     }
 
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     private void Start()
     {
         goldReward = Random.Range(10, 20);
+        player = FindAnyObjectByType<PlayerManager>();
     }
 }

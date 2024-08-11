@@ -43,7 +43,7 @@ public class MenuManager : MonoBehaviour
 
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        gameManager = FindAnyObjectByType<GameManager>();
         camAnim = Camera.main.GetComponent<Animator>();
         enemy = FindObjectOfType<Enemy>();
         player=FindObjectOfType<PlayerManager>();
