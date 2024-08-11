@@ -86,7 +86,6 @@ public class Enemy : MonoBehaviour
         }
         if (isSkeleton == true)
         {
-            audioManager.PlaySFX(audioManager.EnemyAtk_Scimitar);
             skeleton.runEvents();
         }
         if (isNightBorne == true)

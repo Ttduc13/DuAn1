@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static Unity.Burst.Intrinsics.X86.Avx;
+using System.Threading.Tasks;
 public class Skeleton : MonoBehaviour
 {
     public PlayerManager player;
@@ -16,9 +17,12 @@ public class Skeleton : MonoBehaviour
 
     public Animator animator;
 
+    AudioManager audioManager;
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioManager = FindAnyObjectByType<AudioManager>();
         enemy.isSkeleton = true;
     }
 
@@ -30,7 +34,7 @@ public class Skeleton : MonoBehaviour
         Dead();
     }
 
-    public void Chomp()
+    public async void Chomp()
     {
         eventPopUp1.SetActive(false);
         //Deal 11 damage.
@@ -50,9 +54,12 @@ public class Skeleton : MonoBehaviour
         Debug.Log("Enemy use 'Chomp'!");
         Debug.Log("Player take " + damage + " damage!");
         player.updatePlayerHelthBar();
+
+        await Task.Delay(300);
+        audioManager.PlaySFX(audioManager.EnemyAtk_Scimitar);
     }
 
-    public void Thrash()
+    public async void Thrash()
     {
         eventPopUp2.SetActive(false);
         //Deal 7 damage, gain 5 Block.
@@ -75,6 +82,11 @@ public class Skeleton : MonoBehaviour
         player.updatePlayerHelthBar();
 
         enemy.shield = enemy.shield + enemyShield;
+
+        await Task.Delay(200);
+        audioManager.PlaySFX(audioManager.Enemy_Buff);
+        await Task.Delay(850);
+        audioManager.PlaySFX(audioManager.EnemyAtk_Scimitar);
     }
 
     public void randomEvents()

@@ -17,6 +17,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip CardDeal;
     public AudioClip PlayerAtk_Sword;
     public AudioClip EnemyAtk_Scimitar;
+    public AudioClip Enemy_Buff;
 
     void Start()
     {
