@@ -3537,7 +3537,7 @@ PrefabInstance:
     - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: skillPos
       value: 
-      objectReference: {fileID: 1985511174}
+      objectReference: {fileID: 1819370895}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -7509,7 +7509,7 @@ PrefabInstance:
     - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: skillPos
       value: 
-      objectReference: {fileID: 1985511174}
+      objectReference: {fileID: 1819370895}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -10555,62 +10555,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1917044136}
     m_Modifications:
-    - target: {fileID: 30968125746981462, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 83382156892030260, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 313027023577280654, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000553819158469598, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2546358072215308056, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3383057299275650226, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 3409781463812970526, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
       propertyPath: m_Name
       value: Defend
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409781463812970526, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409781463812970526, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3409781463812970526, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_TagString
-      value: Card
       objectReference: {fileID: 0}
     - target: {fileID: 3876195287864209401, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
       propertyPath: shieldPopUp
       value: 
       objectReference: {fileID: 874807664}
-    - target: {fileID: 5759659638045424522, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6939754003846964082, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 7682859164395696646, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
       propertyPath: skillPos
       value: 
-      objectReference: {fileID: 1985511174}
+      objectReference: {fileID: 1819370895}
     - target: {fileID: 9144713381094378128, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

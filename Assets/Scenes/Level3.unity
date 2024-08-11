@@ -3153,7 +3153,7 @@ PrefabInstance:
     - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: skillPos
       value: 
-      objectReference: {fileID: 2011897852}
+      objectReference: {fileID: 1819370895}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -3795,6 +3795,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2136173927}
   m_SourcePrefab: {fileID: 100100000, guid: 35890e4766611fa4b8bfcb5e81f7dbb3, type: 3}
+--- !u!1001 &851806183
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3644085826236568055, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.0909019
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644085826236568055, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.024976239
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644085826236568055, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644085826236568055, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644085826236568055, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644085826236568055, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644085826236568055, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644085826236568055, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644085826236568055, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3644085826236568055, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797447513015276668, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
+      propertyPath: m_Name
+      value: skillcard_buff2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ddd0e946fbc9c6f46bffb870095e0d20, type: 3}
 --- !u!1 &874807664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1029304575821942992, guid: 834f0c721193fff4b89e2e61e9cf9b98, type: 3}
@@ -7083,7 +7140,7 @@ PrefabInstance:
     - target: {fileID: 6719331671360820342, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: skillPos
       value: 
-      objectReference: {fileID: 2011897852}
+      objectReference: {fileID: 1819370895}
     - target: {fileID: 8275471257414323054, guid: 9b3ec9bb71c63ef4db4979a849f8c013, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -8091,6 +8148,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1359731440038864118, guid: b49ed4d99ee016f4e821c22d1c7617e8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5455375421509342498, guid: b49ed4d99ee016f4e821c22d1c7617e8, type: 3}
       propertyPath: m_Name
       value: NightBorne
@@ -8720,7 +8781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1894120271
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10306,7 +10367,7 @@ PrefabInstance:
     - target: {fileID: 7682859164395696646, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
       propertyPath: skillPos
       value: 
-      objectReference: {fileID: 2011897852}
+      objectReference: {fileID: 1819370895}
     - target: {fileID: 9144713381094378128, guid: 96db0fb03dd1a7441b944a00d49f8011, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -10981,3 +11042,4 @@ SceneRoots:
   - {fileID: 1819370895}
   - {fileID: 2011897852}
   - {fileID: 1414116744}
+  - {fileID: 851806183}
