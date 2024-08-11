@@ -3305,14 +3305,14 @@ RectTransform:
   m_GameObject: {fileID: 875557819}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.70832, y: 0.70832, z: 0.70832}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1896209435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 532, y: 163}
+  m_AnchoredPosition: {x: 525, y: 52}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &875557821
@@ -4386,7 +4386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1660336338}
   SFXSource: {fileID: 2037819789}
-  background: {fileID: 8300000, guid: d89e0a1036dd0a8429b15606695abb0e, type: 3}
+  background: {fileID: 8300000, guid: dcbbdba8ee0c5e24f93e56c1f2af8f77, type: 3}
   endTurn: {fileID: 8300000, guid: d17fc15954025ee498cd2dbd35ccb5b1, type: 3}
   playerTurn: {fileID: 8300000, guid: b6aa0cc5e92fdbd45b091b7d546ac813, type: 3}
   enemyTurn: {fileID: 8300000, guid: fafc32ff3dfc9eb4d8a0c7f5e5e2a7c8, type: 3}
@@ -4394,6 +4394,9 @@ MonoBehaviour:
   CardDeal: {fileID: 8300000, guid: 97ad6e234d5d1504ba9fb899ffbbe575, type: 3}
   PlayerAtk_Sword: {fileID: 8300000, guid: a914a02353eb4d9469e4c10f8c2952e6, type: 3}
   EnemyAtk_Scimitar: {fileID: 8300000, guid: 7b03fc5d158d48c4eba4fa86a9ef9892, type: 3}
+  Enemy_Buff: {fileID: 0}
+  Boss1: {fileID: 8300000, guid: 5e413f81b3c86884f8585c112afb6803, type: 3}
+  Boss2: {fileID: 8300000, guid: 4e156f47232c18c49abe0cdf22f08505, type: 3}
 --- !u!81 &1067114524
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7762,9 +7765,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 230261253}
     m_Modifications:
+    - target: {fileID: 418241794954335496, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -154
+      objectReference: {fileID: 0}
+    - target: {fileID: 1112852276488781294, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -166
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224882116530549330, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2415921188453779095, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2907943160321047960, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -152
       objectReference: {fileID: 0}
     - target: {fileID: 3980131936842666930, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
       propertyPath: message
@@ -7788,7 +7807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6207700909095750519, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.64
+      value: 2.18
       objectReference: {fileID: 0}
     - target: {fileID: 6207700909095750519, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7826,6 +7845,14 @@ PrefabInstance:
       propertyPath: message
       value: Deal 10 damage, gain 7 Block
       objectReference: {fileID: 0}
+    - target: {fileID: 6847621088495833680, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6847621088495833680, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_Size.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7498742186938036772, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
       propertyPath: player
       value: 
@@ -7834,6 +7861,26 @@ PrefabInstance:
       propertyPath: eventPopUp3
       value: 
       objectReference: {fileID: 875557819}
+    - target: {fileID: 7500818508725903020, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500818508725903020, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500818508725903020, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75251
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500818508725903020, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 522
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500818508725903020, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 52.000008
+      objectReference: {fileID: 0}
     - target: {fileID: 7944281523234546132, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
       propertyPath: boss
       value: 
@@ -7878,6 +7925,30 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 9045397759020332905, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75251
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045397759020332905, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75251
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045397759020332905, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.75251
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045397759020332905, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 522
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045397759020332905, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175907611943415824, guid: 5ab45d0a883c70f4cb341e30f8db68a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

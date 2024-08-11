@@ -773,7 +773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4867514747442099121, guid: fe495866f0111804a8a9171c193b58c2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -30.999992
+      value: -119
       objectReference: {fileID: 0}
     - target: {fileID: 8530852914268800870, guid: fe495866f0111804a8a9171c193b58c2, type: 3}
       propertyPath: m_Pivot.x
@@ -1269,7 +1269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 240, y: -42.999992}
+  m_AnchoredPosition: {x: 240, y: -131}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &224116908
@@ -1714,7 +1714,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70d8dba9963bf745b7b6464ed52a199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Deal 7 damage, gain 5 Block
+  message: Deal 10 damage.
 --- !u!114 &345032909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1735,7 +1735,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 95d4b0122cd1b2848886bab444fcbefa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b5d2117acc9e5554d9735ac5dcd817d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1787,7 +1787,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 812, y: -29}
+  m_AnchoredPosition: {x: 812, y: -117.00001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &363407880
@@ -5912,7 +5912,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5184443697113553103, guid: 74bba64323be3d24f83b8fa697c157c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.21
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5184443697113553103, guid: 74bba64323be3d24f83b8fa697c157c9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6699,7 +6699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f70d8dba9963bf745b7b6464ed52a199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: Deal 11 damage.
+  message: Deal 10 damage.
 --- !u!114 &1407420503
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using static Unity.Burst.Intrinsics.X86.Avx;
+using System.Threading.Tasks;
 public class Bat : MonoBehaviour
 {
     public PlayerManager player;
@@ -16,9 +17,12 @@ public class Bat : MonoBehaviour
 
     public Animator animator;
 
+    AudioManager audioManager;
+
     void Start()
     {
         animator = GetComponent<Animator>();
+        audioManager = FindAnyObjectByType<AudioManager>();
         enemy.isBat = true;
     }
 
@@ -30,13 +34,13 @@ public class Bat : MonoBehaviour
         Dead();
     }
 
-    public void Chomp()
+    public async void Tackle()
     {
         eventPopUp1.SetActive(false);
-        //Deal 11 damage.
+        //Deal 10 damage.
 
-        int damage = 11;
-        animator.SetTrigger("attack1");
+        int damage = 10;
+        animator.SetTrigger("attack");
         if (player.shield <= damage)
         {
             player.currentHealth = player.currentHealth - damage + player.shield;
@@ -47,34 +51,14 @@ public class Bat : MonoBehaviour
             player.shield -= damage;
         }
 
-        Debug.Log("Enemy use 'Chomp'!");
-        Debug.Log("Player take " + damage + " damage!");
-        player.updatePlayerHelthBar();
-    }
+        
 
-    public void Thrash()
-    {
-        eventPopUp2.SetActive(false);
-        //Deal 7 damage, gain 5 Block.
-        animator.SetTrigger("attack2");
-        int damage = 7;
-        enemyShield = 5;
-
-        if (player.shield <= damage)
-        {
-            player.currentHealth = player.currentHealth - damage + player.shield;
-            player.shield = 0;
-        }
-        else if (player.shield > damage)
-        {
-            player.shield -= damage;
-        }
-
-        Debug.Log("Enemy use 'Thrash'!");
+        Debug.Log("Enemy use 'Tackle'!");
         Debug.Log("Player take " + damage + " damage!");
         player.updatePlayerHelthBar();
 
-        enemy.shield = enemy.shield + enemyShield;
+        await Task.Delay(300);
+        audioManager.PlaySFX(audioManager.EnemyAtk_Scimitar);
     }
 
     public void randomEvents()
@@ -94,11 +78,11 @@ public class Bat : MonoBehaviour
     {
         if (events == 0)
         {
-            Chomp();
+            Tackle();
         }
         if (events == 1)
         {
-            Thrash();
+            Tackle();
         }
     }
 

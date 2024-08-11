@@ -3,7 +3,7 @@ guid: e0289ba444388264c86fd5366e0d7479
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 13
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -119,6 +119,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -126,10 +152,10 @@ TextureImporter:
       name: Bat-Die_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 24
-        width: 34
-        height: 16
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +173,10 @@ TextureImporter:
       name: Bat-Die_1
       rect:
         serializedVersion: 2
-        x: 81
-        y: 30
-        width: 29
-        height: 16
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +194,10 @@ TextureImporter:
       name: Bat-Die_2
       rect:
         serializedVersion: 2
-        x: 147
-        y: 35
-        width: 24
-        height: 15
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +215,10 @@ TextureImporter:
       name: Bat-Die_3
       rect:
         serializedVersion: 2
-        x: 213
-        y: 36
-        width: 19
-        height: 17
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +236,10 @@ TextureImporter:
       name: Bat-Die_4
       rect:
         serializedVersion: 2
-        x: 280
-        y: 34
-        width: 16
-        height: 16
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +257,10 @@ TextureImporter:
       name: Bat-Die_5
       rect:
         serializedVersion: 2
-        x: 346
-        y: 28
-        width: 15
-        height: 18
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +278,10 @@ TextureImporter:
       name: Bat-Die_6
       rect:
         serializedVersion: 2
-        x: 411
-        y: 14
-        width: 13
-        height: 21
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +299,10 @@ TextureImporter:
       name: Bat-Die_7
       rect:
         serializedVersion: 2
-        x: 474
-        y: 10
-        width: 12
-        height: 17
+        x: 448
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +320,10 @@ TextureImporter:
       name: Bat-Die_8
       rect:
         serializedVersion: 2
-        x: 539
-        y: 7
-        width: 141
-        height: 20
+        x: 512
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -307,6 +333,48 @@ TextureImporter:
       bones: []
       spriteID: 7dbb4c9dc07e8c94eafe4333e8717245
       internalID: 433871391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat-Die_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c7fed2d50201242a2fb97030cdaf07
+      internalID: 697285665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bat-Die_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae7059e53339f743b8df0e2349f2c06
+      internalID: -775208845
       vertices: []
       indices: 
       edges: []
@@ -324,6 +392,7 @@ TextureImporter:
     nameFileIdTable:
       Bat-Die_0: -37824843
       Bat-Die_1: 1386251483
+      Bat-Die_10: -775208845
       Bat-Die_2: -1043873033
       Bat-Die_3: 1297742701
       Bat-Die_4: 1651090557
@@ -331,6 +400,7 @@ TextureImporter:
       Bat-Die_6: 1478987007
       Bat-Die_7: 783884574
       Bat-Die_8: 433871391
+      Bat-Die_9: 697285665
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
